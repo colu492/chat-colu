@@ -16,7 +16,9 @@ app.use('/', routerViews)
 let messages = []
 
 io.on('connection', socket => {
-    console.log(`Cliente ${socket.id} conectado`)
+    // console.log(`Cliente ${socket.id} conectado`)
+    socket.broadcast.emit('newUser')
+    io.emit('logs', messages)
     socket.on('message', data => {
         messages.push(data)
         // console.log(messages)
