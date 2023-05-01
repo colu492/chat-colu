@@ -35,6 +35,6 @@ Swal.fire({
         });
         messagesLog.innerHTML = messages
     })
-    socket.on('newUser', () => alert(`Ingreso ${user} a la sala`))
+    socket.on('newUser', () => alert(`Ingreso un nuevo pana a la sala`))
 })
 
